@@ -57,14 +57,14 @@ pipeline:
                       spec:
                         tags: <+input>
                         dockerfile: <+input>
-    - stage:
-        name: Approval
-        identifier: Approval
-        tags: {}
-        template:
-          templateRef: Approval
-          versionLabel: v0.1.0
-          gitBranch: main
+    # - stage:
+    #     name: Approval
+    #     identifier: Approval
+    #     tags: {}
+    #     template:
+    #       templateRef: Approval
+    #       versionLabel: v0.1.0
+    #       gitBranch: main
     - stage:
         name: K8sRollOut
         identifier: K8sRollOut
