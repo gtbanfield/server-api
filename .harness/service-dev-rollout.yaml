@@ -1,0 +1,29 @@
+service:
+  name: server-api
+  identifier: serverapi
+  orgIdentifier: default
+  projectIdentifier: IDA
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: INT
+            type: HelmChart
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: account.Github
+                  gitFetchType: Branch
+                  folderPath: "/helm-charts"
+                  repoName: helm-chart-harness
+                  branch: main
+              subChartPath: ""
+              valuesPaths:
+              #- manifests/server-api/sit/configmap/configmap.yaml
+              - manifests/server-api/sit/immutable/values.yaml
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+              helmVersion: V3
+              fetchHelmChartMetadata: false
+    type: Kubernetes
