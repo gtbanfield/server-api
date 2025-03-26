@@ -13,6 +13,7 @@ public class Api2Controller {
     @PostMapping("/api2")
     public ResponseEntity<String> receiveRequest(@RequestHeader("Custom-Header") String customHeader) {
         // Process the header
+        System.out.println("Header reg-channel-version is : " + customHeader);
         return ResponseEntity.ok("Received header: " + customHeader);
     }
 }
