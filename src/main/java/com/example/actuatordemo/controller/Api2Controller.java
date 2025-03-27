@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Api2Controller {
 
     @PostMapping("/api2")
-    public ResponseEntity<String> receiveRequest(@RequestHeader("Custom-Header") String customHeader) {
+    public ResponseEntity<String> receiveRequest(@RequestHeader("reg-channel-version") String customHeader) {
         // Process the header
         System.out.println("Header reg-channel-version is : " + customHeader);
         return ResponseEntity.ok("Received header: " + customHeader);
