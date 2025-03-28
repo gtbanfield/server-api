@@ -5,7 +5,7 @@ import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
 import org.springframework.stereotype.Component;
 
 @Component
-@Endpoint(id = "server")
+@Endpoint(id = "server-api")
 public class CustomEndpoint {
 
     @ReadOperation
