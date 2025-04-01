@@ -10,6 +10,6 @@ public class CustomEndpoint {
 
     @ReadOperation
     public String customEndpoint() {
-        return "Hi Grant, this is server-api endpoint from hanresslive branch!";
+        return "Hi Grant, this is server-api endpoint from harnesslive branch!";
     }
 }
