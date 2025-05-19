@@ -52,6 +52,10 @@ pipeline:
                     templateRef: Nexus
                     versionLabel: v0.1.0
                     gitBranch: main
+                    templateInputs:
+                      type: BuildAndPushDockerRegistry
+                      spec:
+                        tags: <+input>
               - step:
                   name: docker
                   identifier: docker
